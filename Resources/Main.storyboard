@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uVl-Rl-VBd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="BUa-Fv-sqd">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigation" id="ueL-qa-znW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="57p-9w-93d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.16862745100000001" green="0.34509803919999998" blue="0.46274509800000002" alpha="0.081978103741496597" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" red="0.92549019607843142" green="0.86274509803921573" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                            <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2hi-Oz-8kL">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.5344559981" green="0.93221241239999997" blue="0.71579629690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.5344559981" green="0.93221241239999997" blue="0.71579629690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.5344559981" green="0.93221241239999997" blue="0.71579629690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="ZkW-cZ-2GS" kind="relationship" relationship="rootViewController" id="tZB-BK-Ig1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="es3-Ke-UBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-484"/>
+        </scene>
+        <!--Root Container View Controller-->
+        <scene sceneID="9UM-lq-59S">
+            <objects>
+                <viewController id="uVl-Rl-VBd" customClass="RootContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EMo-uS-BgT"/>
+                        <viewControllerLayoutGuide type="bottom" id="MMV-5N-69b"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="pdL-mC-i47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggz-FQ-xfA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="773"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.58039215690000001" green="0.76862745099999996" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="ueL-qa-znW" kind="embed" identifier="NavigationVCEmbedSegue" id="hSh-jR-wHX"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCs-1W-jXP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ggz-FQ-xfA" firstAttribute="centerX" secondItem="pdL-mC-i47" secondAttribute="centerX" id="4t2-iX-neZ"/>
+                            <constraint firstItem="lCs-1W-jXP" firstAttribute="leading" secondItem="pdL-mC-i47" secondAttribute="leading" id="ASr-AR-hCx"/>
+                            <constraint firstItem="MMV-5N-69b" firstAttribute="top" secondItem="ggz-FQ-xfA" secondAttribute="bottom" constant="45" id="BU2-gI-3HB"/>
+                            <constraint firstItem="ggz-FQ-xfA" firstAttribute="top" secondItem="lCs-1W-jXP" secondAttribute="bottom" id="IGo-wQ-ym4"/>
+                            <constraint firstItem="ggz-FQ-xfA" firstAttribute="width" secondItem="pdL-mC-i47" secondAttribute="width" id="W2N-sf-zsM"/>
+                            <constraint firstItem="ggz-FQ-xfA" firstAttribute="top" secondItem="EMo-uS-BgT" secondAttribute="bottom" id="XQs-rx-4mN"/>
+                            <constraint firstItem="ggz-FQ-xfA" firstAttribute="top" secondItem="pdL-mC-i47" secondAttribute="topMargin" id="doH-QH-pVI"/>
+                            <constraint firstItem="lCs-1W-jXP" firstAttribute="top" secondItem="pdL-mC-i47" secondAttribute="top" id="hTO-iY-c6n"/>
+                            <constraint firstAttribute="trailing" secondItem="lCs-1W-jXP" secondAttribute="trailing" id="lyU-LH-fzK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="doH-QH-pVI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="doH-QH-pVI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0B-Qk-DjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675.36231884057975" y="-484.15178571428567"/>
+        </scene>
+        <!--Codenames-->
+        <scene sceneID="2yi-WZ-vTv">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="ZkW-cZ-2GS" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jQu-FQ-Whf"/>
+                        <viewControllerLayoutGuide type="bottom" id="g03-IV-V6A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s8h-Ez-m56">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="685"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" tag="10" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2MN-GU-IxM">
+                                <rect key="frame" x="19.5" y="40" width="375" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wne-yT-FwE">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
+                                        <color key="backgroundColor" white="0.104439831" alpha="0.2021949405" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="3lL-kn-G5H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="English">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageChoice:" destination="ZkW-cZ-2GS" eventType="touchUpInside" id="HwC-Qu-8RW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0U-oi-f1T">
+                                        <rect key="frame" x="95" y="0.0" width="90" height="34"/>
+                                        <color key="backgroundColor" white="0.104439831" alpha="0.2021949405" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="Ph6-OQ-2Bg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Swedish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageChoice:" destination="ZkW-cZ-2GS" eventType="touchUpInside" id="dZZ-YR-Yuu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20I-qn-SJx">
+                                        <rect key="frame" x="190" y="0.0" width="90" height="34"/>
+                                        <color key="backgroundColor" white="0.104439831" alpha="0.2021949405" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="ry2-ds-h1d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Spanish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageChoice:" destination="ZkW-cZ-2GS" eventType="touchUpInside" id="m08-N4-C38"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzg-uJ-meP">
+                                        <rect key="frame" x="285" y="0.0" width="90" height="34"/>
+                                        <color key="backgroundColor" white="0.104439831" alpha="0.2021949405" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="SM7-Qn-4sX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="French">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageChoice:" destination="ZkW-cZ-2GS" eventType="touchUpInside" id="x3a-LP-a29"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2MN-GU-IxM" firstAttribute="centerX" secondItem="s8h-Ez-m56" secondAttribute="centerX" id="L6X-ZL-MDD"/>
+                            <constraint firstItem="2MN-GU-IxM" firstAttribute="top" secondItem="s8h-Ez-m56" secondAttribute="top" constant="40" id="a8G-Xb-ATL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Codenames" id="GBM-oq-v32"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="languages" destination="wne-yT-FwE" collectionClass="NSMutableArray" id="sCg-1R-KUI"/>
+                        <outletCollection property="languages" destination="h0U-oi-f1T" collectionClass="NSMutableArray" id="rU3-59-Puy"/>
+                        <outletCollection property="languages" destination="20I-qn-SJx" collectionClass="NSMutableArray" id="96y-im-gF2"/>
+                        <outletCollection property="languages" destination="jzg-uJ-meP" collectionClass="NSMutableArray" id="WDM-vD-d0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSe-W2-HCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="-484.48660714285711"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.58039215690000001" green="0.76862745099999996" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>
